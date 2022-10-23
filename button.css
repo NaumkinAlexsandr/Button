@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #333;
+}
+
+section {
+  width: 33%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*----one----*/
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #2196f3;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 24px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transition: 1s;
+  transition-delay: 0.5s;
+  box-shadow: 0px 0px 20px #2196f3, 0px 0px 40px #2196f3, 0px 0px 80px #2196f3;
+  color: #333;
+  background-color: #2196f3;
+}
+
+.button__line {
+  position: absolute;
+  display: block;
+}
+
+.button__line--top {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+.button:hover .button__line--top {
+  left: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.button__line--bottom {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+.button:hover .button__line--bottom {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.button__line--right {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+.button:hover .button__line--right {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0s;
+}
+
+.button__line--left {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(0deg, transparent, #2196f3);
+}
+
+.button:hover .button__line--left {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0s;
+}
+
+/*----two----*/
+
+.button_two {
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  letter-spacing: 0.4em;
+  background-color: #2196f3;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  color: black;
+}
+
+.button_two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.2em;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.2;
+  transform: translateX(-3em) skewX(-45deg);
+}
+
+.button_two:hover {
+  transition: 1.2s;
+  box-shadow: 0px 0px 30px #fff;
+  color: white;
+}
+
+.button_two:hover::before {
+  animation: blick 0.7s;
+}
+
+@keyframes blick {
+  from {
+    transform: translateX(-3em) skewX(-45deg);
+  }
+
+  to {
+    transform: translateX(12em) skewX(-45deg);
+  }
+}
+
+/*----three----*/
+
+.button_three {
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  letter-spacing: 0.4em;
+  background-color: #2196f3;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  color: black;
+}
+
+.button_three:hover {
+  transition: 0.6s;
+  box-shadow: 0px 0px 30px #fff;
+}
+
+.button_three:hover > span {
+  color: #fff;
+}
+
+.one {
+  transition-delay: 0.1s;
+}
+
+.two {
+  transition-delay: 0.15s;
+}
+
+.three {
+  transition-delay: 0.2s;
+}
+
+.four {
+  transition-delay: 0.25s;
+}
+
+.fife {
+  transition-delay: 0.3s;
+}
+
+.six {
+  transition-delay: 0.35s;
+}
